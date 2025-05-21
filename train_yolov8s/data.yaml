@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 6
+names: ['Cardboard', 'Glass', 'Metal', 'Paper', 'Plastic', 'Trash']
+
+roboflow:
+  workspace: vi-h
+  project: rubbish_image
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/vi-h/rubbish_image/dataset/1
