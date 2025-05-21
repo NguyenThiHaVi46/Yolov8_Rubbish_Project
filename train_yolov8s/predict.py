@@ -3,8 +3,8 @@ import os
 from ultralytics import YOLO
 
 # Load model
-model = YOLO("E:/Workspace/Đồ án/Đồ án 2/Waste-Classification-using-YOLOv8/streamlit-detection-tracking - app/weights/best.pt")
-image_path = "E:/Rubbish_Project/Rubbish_Project/train_yolov8s/test_images/img_002.png"
+model = YOLO("E:/Rubbish_Yolo_Project/train_yolov8s/streamlit/weights/best.pt")
+image_path = "E:/Data/AnhThucTe/anh (21).png"
 
 # Predict
 results = model.predict(source=image_path, conf=0.2, iou =0.6, save=True)

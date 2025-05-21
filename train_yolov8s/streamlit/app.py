@@ -65,9 +65,7 @@ if source_radio == settings.IMAGE:
                      use_container_width=True)
         else:
             if st.sidebar.button('Detect Objects'):
-                res = model.predict(uploaded_image,
-                                    conf=confidence
-                                    )
+                res = model.predict(source= uploaded_image, conf=0.2, iou =0.6, save=True)
                 boxes = res[0].boxes
                 res_plotted = res[0].plot()[:, :, ::-1]
                 st.image(res_plotted, caption='Detected Image',
